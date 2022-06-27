@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PODD</string>
+    <string name="button">Previous</string>
+    <string name="next">Next</string>
+    <string name="happy">Happy</string>
+    <string name="prev">Prev</string>
+    <string name="previous">Previous</string>
+    <string name="neutral">Neutral</string>
+    <string name="sad">Sad</string>
+    <string name="angry">Angry</string>
+    <string name="text">Text</string>
+    <string name="audio">Audio</string>
+    <string name="emoji">emoji</string>
+</resources>
