@@ -34,6 +34,7 @@
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:tag="Happy"
+            android:textSize="20dp"
     />
     <Button
             android:text="@string/angry"
@@ -50,6 +51,7 @@
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:tag="Angry"
+            android:textSize="20dp"
     />
     <Button
             android:text="@string/sad"
@@ -66,6 +68,7 @@
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:tag="Sad"
+            android:textSize="20dp"
     />
     <Button
             android:text="@string/neutral"
@@ -82,6 +85,7 @@
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:tag="Neutral"
+            android:textSize="20dp"
     />
     <!--Previous and Next Buttons-->
     <Button
@@ -96,6 +100,7 @@
             android:insetBottom="0dp"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
+            android:textSize="20dp"
     />
     <Button
             android:text="@string/next"
@@ -110,5 +115,6 @@
             android:insetBottom="0dp"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
+            android:textSize="20dp"
     />
 </androidx.constraintlayout.widget.ConstraintLayout>

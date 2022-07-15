@@ -12,7 +12,7 @@
             android:theme="@style/Theme.PODD">
 
         <activity
-                android:name=".MultipleFeelingPage"
+                android:name=".MainMenu"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SingleFeelingPage"/>
+        <activity android:name=".MultipleFeelingPage"/>
     </application>
 
 </manifest>

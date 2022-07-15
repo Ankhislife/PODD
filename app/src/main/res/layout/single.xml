@@ -3,14 +3,14 @@
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   android:id="@+id/background"
+                                                   android:id="@+id/single"
                                                    tools:context=".SingleFeelingPage">
 
     <TextView
             android:id="@+id/feelingName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="30dp"
             android:text="@string/happy"
             android:textSize="30sp"
             android:textColor="@color/black"
@@ -22,47 +22,57 @@
 
     <Button
             android:id="@+id/audio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:text="@string/audio"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/text"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/feelingName" />
+            app:layout_constraintTop_toBottomOf="@+id/feelingName"
+            android:textColor="@color/black"
+            android:backgroundTint="#A9A9A9"/>
 
     <Button
             android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:text="@string/text"
             app:layout_constraintBottom_toBottomOf="@+id/audio"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/audio"
-            app:layout_constraintTop_toTopOf="@+id/audio" />
+            app:layout_constraintTop_toTopOf="@+id/audio"
+            android:textColor="@color/black"
+            android:backgroundTint="#A9A9A9"/>
 
     <ImageView
             android:id="@+id/emoji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="15dp"
             app:layout_constraintBottom_toTopOf="@+id/feelingName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/happy"
             android:contentDescription="@string/emoji"/>
 
     <Button
             android:id="@+id/prev"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/prev"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:backgroundTint="#A9A9A9"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
