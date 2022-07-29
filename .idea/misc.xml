@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/dfsp.xml" value="0.2890625" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/homepage.xml" value="0.2890625" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/multiple.xml" value="0.17291666666666666" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/page.xml" value="0.29010416666666666" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/page_feeling.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/settings.xml" value="0.3890625" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/single.xml" value="0.264" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/menu/main_menu.xml" value="0.2140625" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/xml/preferences.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
