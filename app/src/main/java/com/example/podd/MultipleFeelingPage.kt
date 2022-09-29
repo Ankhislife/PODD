@@ -2,6 +2,7 @@ package com.example.podd
 
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
@@ -14,6 +15,11 @@ class MultipleFeelingPage : AppCompatActivity() {
     private val feelings: Array<Array<String>> = arrayOf(
         arrayOf("Happy", "Sad", "Angry", "Neutral"),
         arrayOf("Disgusted", "Afraid", "Surprised", "In Pain"))
+
+    private val emojis = mapOf("Happy" to R.drawable.happyc, "Sad" to R.drawable.sadc,
+        "Angry" to R.drawable.angryc, "Neutral" to R.drawable.neutralc,
+        "Disgusted" to R.drawable.disgustedc, "Afraid" to R.drawable.afraidc,
+        "Surprised" to R.drawable.surprisedc, "In Pain" to R.drawable.inpainc)
 
     private val colors: Array<Array<Array<Int>>> = arrayOf(
         arrayOf( //default
@@ -31,9 +37,11 @@ class MultipleFeelingPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.multiple)
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-        colorMode = Integer.parseInt(prefs.getString("color", "0"))
+        colorMode = prefs.getString("color", "0")?.let { Integer.parseInt(it) }!!
         val prev = findViewById<Button>(R.id.prev)
         val next = findViewById<Button>(R.id.next)
+        prev.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.leftarrow), null, null, null)
+        next.setCompoundDrawablesWithIntrinsicBounds(null, null, getDrawable(R.drawable.rightarrow), null)
         val tl = findViewById<Button>(R.id.topLeft)
         val tr = findViewById<Button>(R.id.topRight)
         val bl = findViewById<Button>(R.id.botLeft)
@@ -71,6 +79,7 @@ class MultipleFeelingPage : AppCompatActivity() {
             buttons[i].text = feelings[pageIndex][i]
             buttons[i].tag = feelings[pageIndex][i]
             buttons[i].setBackgroundColor(colors[colorMode][pageIndex][i])
+            buttons[i].setCompoundDrawablesWithIntrinsicBounds(null, emojis[buttons[i].tag]?.let { getDrawable(it) }, null, null)
         }
     }
 

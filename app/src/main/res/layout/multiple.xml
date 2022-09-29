@@ -19,6 +19,7 @@
                                                 android:layout_height="match_parent"
                                                 android:orientation="horizontal"
                                                 app:layout_constraintGuide_percent="0.1" />
+
     <Button
             android:text="@string/happy"
             android:layout_width="0dp"
@@ -35,6 +36,8 @@
             android:insetBottom="0dp"
             android:tag="Happy"
             android:textSize="20dp"
+            android:paddingTop="80dp"
+            android:paddingBottom="80dp"
     />
     <Button
             android:text="@string/angry"
@@ -52,6 +55,8 @@
             android:insetBottom="0dp"
             android:tag="Angry"
             android:textSize="20dp"
+            android:paddingTop="80dp"
+            android:paddingBottom="80dp"
     />
     <Button
             android:text="@string/sad"
@@ -69,6 +74,8 @@
             android:insetBottom="0dp"
             android:tag="Sad"
             android:textSize="20dp"
+            android:paddingTop="80dp"
+            android:paddingBottom="80dp"
     />
     <Button
             android:text="@string/neutral"
@@ -86,6 +93,8 @@
             android:insetBottom="0dp"
             android:tag="Neutral"
             android:textSize="20dp"
+            android:paddingTop="80dp"
+            android:paddingBottom="80dp"
     />
     <!--Previous and Next Buttons-->
     <Button

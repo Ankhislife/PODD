@@ -14,6 +14,7 @@ class MainMenu : AppCompatActivity(){
         setContentView(R.layout.homepage)
         val settings = findViewById<Button>(R.id.settings)
         val start = findViewById<Button>(R.id.start)
+
         settings.setOnClickListener {
             this.supportFragmentManager.beginTransaction().replace(R.id.main, SettingsFragment()).commit()
         }

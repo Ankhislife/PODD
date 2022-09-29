@@ -15,4 +15,5 @@
     <string name="start">Start</string>
     <string name="mainName">PODD</string>
     <string name="dropdown">Colors</string>
+    <string name="back">Back</string>
 </resources>

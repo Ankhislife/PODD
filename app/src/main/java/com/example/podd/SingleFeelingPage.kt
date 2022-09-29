@@ -1,8 +1,6 @@
 package com.example.podd
 
-import android.graphics.BitmapFactory
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -31,7 +29,7 @@ class SingleFeelingPage : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.single)
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-        colorMode = Integer.parseInt(prefs.getString("color", "0"))
+        colorMode = prefs.getString("color", "0")?.let { Integer.parseInt(it) }!!
         val extras = intent.extras
         var emoji = findViewById<ImageView>(R.id.emoji)
         var feelingName = findViewById<TextView>(R.id.feelingName)
