@@ -10,7 +10,7 @@
             android:id="@+id/feelingName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="40dp"
             android:text="@string/happy"
             android:textSize="30sp"
             android:textColor="@color/black"
@@ -22,8 +22,8 @@
 
     <Button
             android:id="@+id/audio"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:text="@string/audio"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/text"
@@ -31,12 +31,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/feelingName"
             android:textColor="@color/black"
-            android:backgroundTint="#A9A9A9"/>
+            android:backgroundTint="#A9A9A9"
+            android:paddingTop="25dp"
+            android:paddingBottom="20dp"/>
 
     <Button
             android:id="@+id/text"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:text="@string/text"
             app:layout_constraintBottom_toBottomOf="@+id/audio"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +46,9 @@
             app:layout_constraintStart_toEndOf="@+id/audio"
             app:layout_constraintTop_toTopOf="@+id/audio"
             android:textColor="@color/black"
-            android:backgroundTint="#A9A9A9"/>
+            android:backgroundTint="#A9A9A9"
+            android:paddingTop="25dp"
+            android:paddingBottom="20dp"/>
 
     <ImageView
             android:id="@+id/emoji"
@@ -53,8 +57,8 @@
             android:adjustViewBounds="true"
             android:maxHeight="200dp"
             android:maxWidth="200dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
             app:layout_constraintBottom_toTopOf="@+id/feelingName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,8 +69,8 @@
 
     <Button
             android:id="@+id/prev"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/back"

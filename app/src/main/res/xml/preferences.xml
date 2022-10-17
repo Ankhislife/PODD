@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                                      xmlns:app="http://schemas.android.com/apk/res-auto">
+                                      xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
     <PreferenceCategory android:title="Volume">
         <androidx.preference.SeekBarPreference
-            android:key="volume"
-            android:max="10"
-            android:id="@+id/volume"/>
+                android:title="Speech Volume"
+                android:key="volume"
+                android:max="10"
+                android:id="@+id/volume"
+        />
+        <androidx.preference.SeekBarPreference
+                android:title="Tune Volume"
+                android:key="tunevolume"
+                android:max="10"
+                android:id="@+id/tunevolume"
+        />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Color">
         <DropDownPreference
                 android:key="color"
                 android:title="@string/dropdown"
                 android:entries="@array/entries"
                 app:useSimpleSummaryProvider="true"
-                android:entryValues="@array/entry_values"/>
+                android:entryValues="@array/entry_values"
+        />
     </PreferenceCategory>
 </androidx.preference.PreferenceScreen>

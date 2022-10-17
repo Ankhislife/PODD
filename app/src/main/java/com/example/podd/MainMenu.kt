@@ -2,10 +2,9 @@ package com.example.podd
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentActivity
+
 
 
 class MainMenu : AppCompatActivity(){
@@ -15,8 +14,15 @@ class MainMenu : AppCompatActivity(){
         val settings = findViewById<Button>(R.id.settings)
         val start = findViewById<Button>(R.id.start)
 
+
+
+        settings.setCompoundDrawablesWithIntrinsicBounds(null, getDrawable(R.drawable.gearsmall), null, null)
+        start.setCompoundDrawablesWithIntrinsicBounds(null, getDrawable(R.drawable.wavingsmall), null, null)
+
         settings.setOnClickListener {
-            this.supportFragmentManager.beginTransaction().replace(R.id.main, SettingsFragment()).commit()
+            val context = it.context
+            val intent = Intent(context, SettingsActivity::class.java)
+            it.context.startActivity(intent)
         }
         start.setOnClickListener{
             val context = it.context

@@ -6,17 +6,22 @@
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/afraidc.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/angryc.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/disgustedc.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/gear.xml" value="0.30520833333333336" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/happyc.xml" value="0.37222222222222223" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/hc.xml" value="0.30625" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/inpainc.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/left.xml" value="0.37222222222222223" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/leftarrow.xml" value="0.30625" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/neutralc.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/rightarrow.xml" value="0.37222222222222223" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/sadc.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v23/surprisedc.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.40625" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/afraidc.xml" value="0.30520833333333336" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/angryc.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/disgustedc.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/gear.xml" value="0.30520833333333336" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/gearsmall.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/happy.xml" value="0.30520833333333336" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/happyc.xml" value="0.37222222222222223" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/hc.xml" value="0.30520833333333336" />
@@ -24,7 +29,9 @@
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/left.xml" value="0.37222222222222223" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/leftarrow.xml" value="0.215625" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/neutralc.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/notesmall.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/sadc.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/speaksmall.xml" value="0.40520833333333334" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/surprisedc.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/dfsp.xml" value="0.2890625" />
@@ -34,7 +41,9 @@
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/page_feeling.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/settings.xml" value="0.3890625" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/single.xml" value="0.264" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/textbig.xml" value="0.1984375" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/menu/main_menu.xml" value="0.2140625" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/menu/multiplemenu.xml" value="0.4036458333333333" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/xml/preferences.xml" value="0.536" />
       </map>
     </option>

@@ -1,7 +1,10 @@
 package com.example.podd
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -39,6 +42,8 @@ class SingleFeelingPage : AppCompatActivity(){
         }
         var audio = findViewById<Button>(R.id.audio)
         var text = findViewById<Button>(R.id.text)
+        audio.setCompoundDrawablesWithIntrinsicBounds(null, getDrawable(R.drawable.notesmall), null, null)
+        text.setCompoundDrawablesWithIntrinsicBounds(null, getDrawable(R.drawable.speaksmall), null, null)
 
 
         if(extras != null){
@@ -52,5 +57,21 @@ class SingleFeelingPage : AppCompatActivity(){
             //Dynamic content description of emoji
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.multiplemenu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.home -> {
+                val intent = Intent(this, MainMenu::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+                finish()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

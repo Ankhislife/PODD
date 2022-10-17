@@ -10,7 +10,7 @@
             android:id="@+id/mainName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="40dp"
             android:text="@string/mainName"
             android:textSize="30sp"
             android:textColor="@color/black"
@@ -22,8 +22,8 @@
 
     <Button
             android:id="@+id/start"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:text="@string/start"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/settings"
@@ -31,12 +31,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mainName"
             android:textColor="@color/black"
-            android:backgroundTint="#A9A9A9"/>
+            android:backgroundTint="#A9A9A9"
+            android:paddingTop="25dp"
+            android:paddingBottom="20dp"/>
 
     <Button
             android:id="@+id/settings"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:text="@string/settings"
             app:layout_constraintBottom_toBottomOf="@+id/start"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +46,10 @@
             app:layout_constraintStart_toEndOf="@+id/start"
             app:layout_constraintTop_toTopOf="@+id/start"
             android:textColor="@color/black"
-            android:backgroundTint="#A9A9A9"/>
+            android:backgroundTint="#A9A9A9"
+            android:paddingTop="25dp"
+            android:paddingBottom="20dp"
+            />
 
     <ImageView
             android:id="@+id/emoji"
@@ -53,8 +58,8 @@
             android:adjustViewBounds="true"
             android:maxHeight="200dp"
             android:maxWidth="200dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
             app:layout_constraintBottom_toTopOf="@+id/mainName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

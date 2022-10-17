@@ -2,8 +2,9 @@ package com.example.podd
 
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
@@ -90,6 +91,22 @@ class MultipleFeelingPage : AppCompatActivity() {
             intent.putExtra("feeling", v.tag.toString())
             v.context.startActivity(intent)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.multiplemenu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.home -> {
+                val intent = Intent(this, MainMenu::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+                finish()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
 
