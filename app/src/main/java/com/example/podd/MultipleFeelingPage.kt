@@ -1,8 +1,6 @@
 package com.example.podd
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ScaleDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,23 +8,14 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 
 
 class MultipleFeelingPage : AppCompatActivity() {
-    private val feelings: Array<Array<String>> = arrayOf(
-        arrayOf("Happy", "Sad", "Angry", "Neutral"),
-        arrayOf("Disgusted", "Afraid", "Surprised", "In Pain"))
-
-    private val colors: Array<Array<Array<Int>>> = arrayOf(
-        arrayOf( //default
-            arrayOf(Color.parseColor("#FFFF00"), Color.parseColor("#1e90ff"), Color.parseColor("#FF0000"), Color.parseColor("#e0e0e0")),
-            arrayOf(Color.parseColor("#00a86b"), Color.parseColor("#444444"), Color.parseColor("#FF712D"), Color.parseColor("#765329"))),
-        arrayOf( //faded
-            arrayOf(Color.parseColor("#FFFFBF"), Color.parseColor("#A9D1F7"), Color.parseColor("#FFB1B0"), Color.parseColor("#e0e0e0")),
-            arrayOf(Color.parseColor("#B4F0A7"), Color.parseColor("#555555"), Color.parseColor("#FFDFBE"), Color.parseColor("#BD9A76"))))
-
+    private val feelings: Array<String> = arrayOf(
+        "Happy", "Sad", "Angry", "Neutral", "Disgusted", "Afraid", "Surprised", "In Pain")
 
     private var pageIndex = 0
 
@@ -60,13 +49,13 @@ class MultipleFeelingPage : AppCompatActivity() {
         prev.setOnClickListener{
             pageIndex--
             if(pageIndex < 0){
-                pageIndex = feelings.size-1
+                pageIndex = (feelings.size/4)-1
             }
             redraw()
         }
         next.setOnClickListener{
             pageIndex++
-            if(pageIndex >= feelings.size){
+            if(pageIndex >= (feelings.size/4)){
                 pageIndex = 0
             }
             redraw()
@@ -76,13 +65,15 @@ class MultipleFeelingPage : AppCompatActivity() {
 
     private fun redraw(){
         for(i in buttons.indices){
-            buttons[i].text = feelings[pageIndex][i]
-            buttons[i].tag = feelings[pageIndex][i]
-            buttons[i].setBackgroundColor(colors[colorMode][pageIndex][i])
+            buttons[i].text = feelings[i + pageIndex * 4]
+            buttons[i].tag = feelings[i + pageIndex * 4]
+            val colorIdentifier = if(colorMode == 0) feelings[i + pageIndex * 4].lowercase().filter {!it.isWhitespace()} else feelings[i + pageIndex * 4].lowercase().filter {!it.isWhitespace()  } + "_faded"
+            val color = ContextCompat.getColor(this, resources.getIdentifier(colorIdentifier, "color", packageName))
+            buttons[i].setBackgroundColor(color)
             val prefs = PreferenceManager.getDefaultSharedPreferences(this)
             val emojiResource = resources.getIdentifier(prefs.getString(buttons[i].tag.toString(), buttons[i].tag.toString()), "drawable", packageName)
             val draw = ResourcesCompat.getDrawable(resources, emojiResource, null)
-            draw?.setBounds(0, 0, 200, 200);
+            draw?.setBounds(0, 0, 200, 200)
             buttons[i].setCompoundDrawables(null, draw, null, null)
         }
     }

@@ -8,4 +8,26 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#A9A9A9</color>
+    <color name="button_color">#C0C0C0</color>
+
+    <color name="happy">#FFFF00</color>
+    <color name="sad">#1e90ff</color>
+    <color name="angry">#FF0000</color>
+    <color name="neutral">#e0e0e0</color>
+    <color name="disgusted">#00a86b</color>
+    <color name="afraid">#444444</color>
+    <color name="surprised">#FF712D</color>
+    <color name="inpain">#765329</color>
+
+    <color name="happy_faded">#FFFFBF</color>
+    <color name="sad_faded">#A9D1F7</color>
+    <color name="angry_faded">#FFB1B0</color>
+    <color name="neutral_faded">#e0e0e0</color>
+    <color name="disgusted_faded">#B4F0A7</color>
+    <color name="afraid_faded">#555555</color>
+    <color name="surprised_faded">#FFDFBE</color>
+    <color name="inpain_faded">#BD9A76</color>
+
+
+
 </resources>

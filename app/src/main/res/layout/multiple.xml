@@ -107,7 +107,7 @@
             android:minWidth="0dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/button_color"
             android:textColor="@color/black"
             android:textSize="20dp"
     />
@@ -122,7 +122,7 @@
             android:minWidth="0dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/button_color"
             android:textColor="@color/black"
             android:textSize="20dp"
     />

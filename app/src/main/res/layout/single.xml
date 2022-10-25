@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/feelingName"
             android:textColor="@color/black"
-            android:backgroundTint="#A9A9A9"
+            android:backgroundTint="@color/button_color"
             android:paddingTop="25dp"
             android:paddingBottom="20dp"/>
 
@@ -57,7 +57,7 @@
             app:layout_constraintStart_toEndOf="@+id/audio"
             app:layout_constraintTop_toTopOf="@+id/audio"
             android:textColor="@color/black"
-            android:backgroundTint="#A9A9A9"
+            android:backgroundTint="@color/button_color"
             android:paddingTop="25dp"
             android:paddingBottom="20dp"/>
 
@@ -87,7 +87,7 @@
             android:minWidth="0dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/button_color"
             android:textColor="@color/black"
             android:textSize="20dp"/>
 
