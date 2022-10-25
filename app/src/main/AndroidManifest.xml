@@ -23,6 +23,7 @@
         <activity android:name=".SingleFeelingPage"/>
         <activity android:name=".MultipleFeelingPage"/>
         <activity android:name=".SettingsActivity"/>
+        <activity android:name=".EmojiChooser"/>
     </application>
 
 </manifest>

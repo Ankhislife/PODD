@@ -2,14 +2,12 @@
 android:layout_height="match_parent"
 android:layout_width="match_parent">
 <TextView
-          style="?android:attr/listSeparatorTextViewStyle"
           android:id="@android:id/title"
           android:textSize="40sp"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
 />
 <TextView
-          style="?android:attr/listSeparatorTextViewStyle"
           android:id="@android:id/summary"
           android:textSize="40sp"
           android:layout_width="wrap_content"

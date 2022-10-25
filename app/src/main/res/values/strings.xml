@@ -8,12 +8,24 @@
     <string name="neutral">Neutral</string>
     <string name="sad">Sad</string>
     <string name="angry">Angry</string>
+    <string name="surprised">Surprised</string>
+    <string name="inpain">In Pain</string>
+    <string name="disgusted">Disgusted</string>
+    <string name="afraid">Afraid</string>
     <string name="text">Speak</string>
     <string name="audio">Tune</string>
     <string name="emoji">emoji</string>
     <string name="settings">Settings</string>
     <string name="start">Start</string>
     <string name="mainName">PODD</string>
-    <string name="dropdown">Colors</string>
+    <string name="colordropdown">Colors</string>
     <string name="back">Back</string>
+    <string name="happypref">Happy Emoji</string>
+    <string name="sadpref">Sad Emoji</string>
+    <string name="angrypref">Angry Emoji</string>
+    <string name="neutralpref">Neutral Emoji</string>
+    <string name="inpainpref">In Pain Emoji</string>
+    <string name="disgustedpref">Disgusted Emoji</string>
+    <string name="afraidpref">Afraid Emoji</string>
+    <string name="surprisedpref">Surprised Emoji</string>
 </resources>

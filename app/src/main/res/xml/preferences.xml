@@ -20,10 +20,10 @@
     <PreferenceCategory android:title="Color">
         <DropDownPreference
                 android:key="color"
-                android:title="@string/dropdown"
-                android:entries="@array/entries"
+                android:title="@string/colordropdown"
+                android:entries="@array/color_modes"
                 app:useSimpleSummaryProvider="true"
-                android:entryValues="@array/entry_values"
+                android:entryValues="@array/color_values"
         />
     </PreferenceCategory>
 </androidx.preference.PreferenceScreen>

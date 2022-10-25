@@ -7,12 +7,20 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 
-
-class SettingsActivity : AppCompatActivity() {
+class EmojiChooser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
-        this.supportFragmentManager.beginTransaction().replace(R.id.settings, SettingsFragment()).commit()
+        val extras = intent.extras
+        val feeling = extras?.getString("feeling")
+        val bundle = Bundle()
+        bundle.putString("feeling", feeling)
+        val fragment = EmojiFragment()
+        fragment.arguments = bundle
+
+        this.supportFragmentManager.beginTransaction().replace(R.id.settings, fragment).commit()
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
