@@ -2,6 +2,7 @@ package com.example.podd
 
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.ScaleDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 
 
@@ -16,11 +18,6 @@ class MultipleFeelingPage : AppCompatActivity() {
     private val feelings: Array<Array<String>> = arrayOf(
         arrayOf("Happy", "Sad", "Angry", "Neutral"),
         arrayOf("Disgusted", "Afraid", "Surprised", "In Pain"))
-
-    private val emojis = mapOf("Happy" to R.drawable.happyc, "Sad" to R.drawable.sadc,
-        "Angry" to R.drawable.angryc, "Neutral" to R.drawable.neutralc,
-        "Disgusted" to R.drawable.disgustedc, "Afraid" to R.drawable.afraidc,
-        "Surprised" to R.drawable.surprisedc, "In Pain" to R.drawable.inpainc)
 
     private val colors: Array<Array<Array<Int>>> = arrayOf(
         arrayOf( //default
@@ -32,6 +29,8 @@ class MultipleFeelingPage : AppCompatActivity() {
 
 
     private var pageIndex = 0
+
+    //0 is default, 1 is faded
     private var colorMode = 0
     private var buttons: Array<Button> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,7 +79,11 @@ class MultipleFeelingPage : AppCompatActivity() {
             buttons[i].text = feelings[pageIndex][i]
             buttons[i].tag = feelings[pageIndex][i]
             buttons[i].setBackgroundColor(colors[colorMode][pageIndex][i])
-            buttons[i].setCompoundDrawablesWithIntrinsicBounds(null, emojis[buttons[i].tag]?.let { getDrawable(it) }, null, null)
+            val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+            val emojiResource = resources.getIdentifier(prefs.getString(buttons[i].tag.toString(), buttons[i].tag.toString()), "drawable", packageName)
+            val draw = ResourcesCompat.getDrawable(resources, emojiResource, null)
+            draw?.setBounds(0, 0, 200, 200);
+            buttons[i].setCompoundDrawables(null, draw, null, null)
         }
     }
 

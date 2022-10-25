@@ -19,11 +19,14 @@ class MainMenu : AppCompatActivity(){
         settings.setCompoundDrawablesWithIntrinsicBounds(null, getDrawable(R.drawable.gearsmall), null, null)
         start.setCompoundDrawablesWithIntrinsicBounds(null, getDrawable(R.drawable.wavingsmall), null, null)
 
+        //launches settings activity
         settings.setOnClickListener {
             val context = it.context
             val intent = Intent(context, SettingsActivity::class.java)
             it.context.startActivity(intent)
         }
+
+        //launches multiple feelings activity
         start.setOnClickListener{
             val context = it.context
             val intent = Intent(context, MultipleFeelingPage::class.java)

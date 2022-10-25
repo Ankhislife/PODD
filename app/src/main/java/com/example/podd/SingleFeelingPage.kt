@@ -26,11 +26,7 @@ class SingleFeelingPage : AppCompatActivity(){
                                     "Disgusted" to Color.parseColor("#B4F0A7"), "Afraid" to Color.parseColor("#555555"),
                                     "Surprised" to Color.parseColor("#FFDFBE"), "In Pain" to Color.parseColor("#BD9A76")))
 
-    private val emojis = mapOf("Happy" to R.drawable.happy, "Sad" to R.drawable.sad,
-        "Angry" to R.drawable.angry, "Neutral" to R.drawable.neutral,
-        "Disgusted" to R.drawable.disgusted, "Afraid" to R.drawable.afraid,
-        "Surprised" to R.drawable.surprised, "In Pain" to R.drawable.inpain)
-
+    //0 is default, 1 is faded
     private var colorMode = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,7 +61,8 @@ class SingleFeelingPage : AppCompatActivity(){
             var background = findViewById<ConstraintLayout>(R.id.single)
             val color = colors[colorMode][feeling] as Int
             background.setBackgroundColor(color)
-            emoji.setImageResource(emojis[feeling] as Int)
+            val emojiResource = resources.getIdentifier(prefs.getString(feeling, feeling), "drawable", packageName)
+            emoji.setImageResource(emojiResource)
             //TO-DO: set up audio samples for two buttons
             //Dynamic content description of emoji
         }
