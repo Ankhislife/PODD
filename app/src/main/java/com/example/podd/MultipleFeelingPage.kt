@@ -71,7 +71,7 @@ class MultipleFeelingPage : AppCompatActivity() {
             val color = ContextCompat.getColor(this, resources.getIdentifier(colorIdentifier, "color", packageName))
             buttons[i].setBackgroundColor(color)
             val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-            val emojiResource = resources.getIdentifier(prefs.getString(buttons[i].tag.toString(), buttons[i].tag.toString()), "drawable", packageName)
+            val emojiResource = resources.getIdentifier(prefs.getString(buttons[i].tag.toString(), buttons[i].tag.toString())?.lowercase()?.filter {!it.isWhitespace()}, "drawable", packageName)
             val draw = ResourcesCompat.getDrawable(resources, emojiResource, null)
             draw?.setBounds(0, 0, 200, 200)
             buttons[i].setCompoundDrawables(null, draw, null, null)

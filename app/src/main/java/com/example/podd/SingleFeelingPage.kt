@@ -48,7 +48,7 @@ class SingleFeelingPage : AppCompatActivity(){
             val colorIdentifier = if(colorMode == 0) feeling?.lowercase()?.filter {!it.isWhitespace()} else feeling?.lowercase()?.filter {!it.isWhitespace()  } + "_faded"
             val color = ContextCompat.getColor(this, resources.getIdentifier(colorIdentifier, "color", packageName))
             background.setBackgroundColor(color)
-            val emojiResource = resources.getIdentifier(prefs.getString(feeling, feeling), "drawable", packageName)
+            val emojiResource = resources.getIdentifier(prefs.getString(feeling, feeling)!!.lowercase().filter {!it.isWhitespace()}, "drawable", packageName)
             emoji.setImageResource(emojiResource)
             //TO-DO: set up audio samples for two buttons
             //Dynamic content description of emoji
