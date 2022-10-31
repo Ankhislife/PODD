@@ -25,6 +25,7 @@
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/happy.xml" value="0.30520833333333336" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/happyc.xml" value="0.37222222222222223" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/hc.xml" value="0.30520833333333336" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/highlight.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/inpainc.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/left.xml" value="0.37222222222222223" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/leftarrow.xml" value="0.215625" />
@@ -35,6 +36,7 @@
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/drawable/surprisedc.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/dfsp.xml" value="0.2890625" />
+        <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/emojiselect.xml" value="0.2484375" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/emojisettings.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/homepage.xml" value="0.2890625" />
         <entry key="..\:/Users/tulen/PODD/app/src/main/res/layout/multiple.xml" value="0.2" />

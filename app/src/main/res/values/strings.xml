@@ -28,4 +28,5 @@
     <string name="disgustedpref">Disgusted Emoji</string>
     <string name="afraidpref">Afraid Emoji</string>
     <string name="surprisedpref">Surprised Emoji</string>
+    <string name="select">Select</string>
 </resources>

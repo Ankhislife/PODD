@@ -25,6 +25,9 @@
 
     <string-array name="sad_filenames">
         <item>sad</item>
+        <item>happy</item>
+        <item>disgusted</item>
+        <item>angry</item>
     </string-array>
 
     <string-array name="surprised">

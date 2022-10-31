@@ -1,5 +1,6 @@
 package com.example.podd
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -7,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -39,9 +41,9 @@ class SingleFeelingPage : AppCompatActivity(){
             val feeling = extras.getString("feeling")
             emoji.setOnClickListener {
                 val context = it.context
-                val intent = Intent(context, EmojiChooser::class.java)
+                val intent = Intent(context, EmojiSelection::class.java)
                 intent.putExtra("feeling", feeling)
-                it.context.startActivity(intent)
+                getResult.launch(intent)
             }
             feelingName.text = feeling
             val background = findViewById<ConstraintLayout>(R.id.single)
@@ -54,6 +56,12 @@ class SingleFeelingPage : AppCompatActivity(){
             //Dynamic content description of emoji
         }
 
+    }
+
+    private val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        if(it.resultCode == Activity.RESULT_OK){
+            recreate()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
