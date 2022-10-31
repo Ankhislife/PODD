@@ -87,6 +87,11 @@ class MultipleFeelingPage : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        redraw()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.multiplemenu, menu)
         return true
