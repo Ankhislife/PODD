@@ -17,6 +17,7 @@ import androidx.preference.PreferenceManager
 class SingleFeelingPage : AppCompatActivity(){
     //0 is default, 1 is faded
     private var colorMode = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.single)
@@ -60,8 +61,17 @@ class SingleFeelingPage : AppCompatActivity(){
 
     private val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         if(it.resultCode == Activity.RESULT_OK){
-            recreate()
+            redraw()
         }
+    }
+
+    private fun redraw() {
+        val extras = intent.extras
+        val feeling = extras?.getString("feeling")
+        val emoji = findViewById<ImageView>(R.id.emoji)
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        val emojiResource = resources.getIdentifier(prefs.getString(feeling, feeling)!!.lowercase().filter {!it.isWhitespace()}, "drawable", packageName)
+        emoji.setImageResource(emojiResource)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
