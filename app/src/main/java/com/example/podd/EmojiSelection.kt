@@ -1,9 +1,6 @@
 package com.example.podd
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.ColorFilter
-import android.graphics.LightingColorFilter
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
