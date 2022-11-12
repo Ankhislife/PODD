@@ -104,6 +104,18 @@ class MultipleFeelingPage : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+            R.id.gearIcon -> {
+                val intent = Intent(this, SettingsActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+                finish()
+            }
+            R.id.mfp -> {
+                val intent = Intent(this, MultipleFeelingPage::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+                finish()
+            }
         }
         return super.onOptionsItemSelected(item)
     }
