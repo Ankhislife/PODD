@@ -17,6 +17,9 @@
 
     <string-array name="happy_filenames">
         <item>happy</item>
+        <item>happy2</item>
+        <item>happy_3d</item>
+        <item>happy_mono</item>
     </string-array>
 
     <string-array name="sad">
@@ -25,9 +28,9 @@
 
     <string-array name="sad_filenames">
         <item>sad</item>
-        <item>happy</item>
-        <item>disgusted</item>
-        <item>angry</item>
+        <item>sad2</item>
+        <item>sad_3d</item>
+        <item>sad_mono</item>
     </string-array>
 
     <string-array name="surprised">
@@ -36,6 +39,9 @@
 
     <string-array name="surprised_filenames">
         <item>surprised</item>
+        <item>surprised2</item>
+        <item>surprised_3d</item>
+        <item>surprised_mono</item>
     </string-array>
 
     <string-array name="angry">
@@ -44,6 +50,9 @@
 
     <string-array name="angry_filenames">
         <item>angry</item>
+        <item>angry2</item>
+        <item>angry_3d</item>
+        <item>angry_mono</item>
     </string-array>
 
     <string-array name="inpain">
@@ -52,6 +61,9 @@
 
     <string-array name="inpain_filenames">
         <item>inpain</item>
+        <item>inpain2</item>
+        <item>inpain_3d</item>
+        <item>inpain_mono</item>
     </string-array>
 
     <string-array name="neutral">
@@ -60,6 +72,9 @@
 
     <string-array name="neutral_filenames">
         <item>neutral</item>
+        <item>neutral2</item>
+        <item>neutral_3d</item>
+        <item>neutral_mono</item>
     </string-array>
 
     <string-array name="afraid">
@@ -68,6 +83,9 @@
 
     <string-array name="afraid_filenames">
         <item>afraid</item>
+        <item>afraid2</item>
+        <item>afraid_3d</item>
+        <item>afraid_mono</item>
     </string-array>
 
     <string-array name="disgusted">
@@ -76,5 +94,8 @@
 
     <string-array name="disgusted_filenames">
         <item>disgusted</item>
+        <item>disgusted2</item>
+        <item>disgusted_3d</item>
+        <item>disgusted_mono</item>
     </string-array>
 </resources>
