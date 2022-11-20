@@ -14,6 +14,15 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
 
+
+/*
+Name: Daniel Koronthaly
+Reach out to me on LinkedIn or at daniel@koronthaly.net for any questions.
+
+Specification: This file is for the single feeling page as described by single.xml
+
+TO-DO: Make the audio and text buttons play the audio files
+ */
 class SingleFeelingPage : AppCompatActivity(){
     //0 is default, 1 is faded
     private var colorMode = 0
@@ -40,6 +49,7 @@ class SingleFeelingPage : AppCompatActivity(){
 
         if(extras != null){
             val feeling = extras.getString("feeling")
+            //clicking on the emoji takes you to a selection screen to choose from 4 different emojis
             emoji.setOnClickListener {
                 val context = it.context
                 val intent = Intent(context, EmojiSelection::class.java)
@@ -48,23 +58,30 @@ class SingleFeelingPage : AppCompatActivity(){
             }
             feelingName.text = feeling
             val background = findViewById<ConstraintLayout>(R.id.single)
+
+            //this gets the color for the background from colors.xml
             val colorIdentifier = if(colorMode == 0) feeling?.lowercase()?.filter {!it.isWhitespace()} else feeling?.lowercase()?.filter {!it.isWhitespace()  } + "_faded"
             val color = ContextCompat.getColor(this, resources.getIdentifier(colorIdentifier, "color", packageName))
             background.setBackgroundColor(color)
+
+            //this gets the emoji from preferences and then from drawables (hint: the filename for the emoji is the same as the preference set)
             val emojiResource = resources.getIdentifier(prefs.getString(feeling, feeling)!!.lowercase().filter {!it.isWhitespace()}, "drawable", packageName)
             emoji.setImageResource(emojiResource)
+
             //TO-DO: set up audio samples for two buttons
             //Dynamic content description of emoji
         }
 
     }
 
+    //When you choose a different emoji from the EmojiSelection activity, you want it to update when you return to this activity
     private val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         if(it.resultCode == Activity.RESULT_OK){
             redraw()
         }
     }
 
+    //Redraws the emoji so it's updated to the newest preference chosen
     private fun redraw() {
         val extras = intent.extras
         val feeling = extras?.getString("feeling")
@@ -78,6 +95,8 @@ class SingleFeelingPage : AppCompatActivity(){
         menuInflater.inflate(R.menu.multiplemenu, menu)
         return true
     }
+
+    //Action bar as defined by R.menu.multiplemenu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.home -> {

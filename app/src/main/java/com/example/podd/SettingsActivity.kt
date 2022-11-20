@@ -7,7 +7,15 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 
+/*
+Name: Daniel Koronthaly
+Reach out to me on LinkedIn or at daniel@koronthaly.net for any questions.
 
+Specification: This file inflates R.id.settings, or the main settings page.
+
+TO-DO: Connect the volume sliders to the audio played in SingleFeelingPage
+
+ */
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

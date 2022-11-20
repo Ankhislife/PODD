@@ -12,7 +12,13 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 
+/*
+Name: Daniel Koronthaly
+Reach out to me on LinkedIn or at daniel@koronthaly.net for any questions.
 
+Specification: This file is for the multiple feeling page as described by multiple.xml
+
+ */
 class MultipleFeelingPage : AppCompatActivity() {
     private val feelings: Array<String> = arrayOf(
         "Happy", "Sad", "Angry", "Neutral", "Disgusted", "Afraid", "Surprised", "In Pain")
@@ -29,8 +35,11 @@ class MultipleFeelingPage : AppCompatActivity() {
         colorMode = prefs.getString("color", "0")?.let { Integer.parseInt(it) }!!
         val prev = findViewById<Button>(R.id.prev)
         val next = findViewById<Button>(R.id.next)
+
+        //draws the left and right arrows for the back and next buttons
         prev.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.leftarrow), null, null, null)
         next.setCompoundDrawablesWithIntrinsicBounds(null, null, getDrawable(R.drawable.rightarrow), null)
+
         val tl = findViewById<Button>(R.id.topLeft)
         val tr = findViewById<Button>(R.id.topRight)
         val bl = findViewById<Button>(R.id.botLeft)
@@ -63,6 +72,7 @@ class MultipleFeelingPage : AppCompatActivity() {
 
     }
 
+    //This redraws the page, pulling file resources anew
     private fun redraw(){
         for(i in buttons.indices){
             buttons[i].text = feelings[i + pageIndex * 4]
@@ -87,11 +97,14 @@ class MultipleFeelingPage : AppCompatActivity() {
         }
     }
 
+    //When we choose a different emoji in EmojiSelection, we need to refresh this page when returning to it
+    //Otherwise, the old emoji would still show up rather than the new one we selected
     override fun onResume() {
         super.onResume()
         redraw()
     }
 
+    //Action bar
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.multiplemenu, menu)
         return true

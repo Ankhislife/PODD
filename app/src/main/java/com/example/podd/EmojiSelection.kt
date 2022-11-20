@@ -10,7 +10,14 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 
+/*
+Name: Daniel Koronthaly
+Reach out to me on LinkedIn or at daniel@koronthaly.net for any questions.
 
+Specification: This file is to choose an emoji as per emojiselect.xml
+
+To add different emojis, add the file to the drawables folder, and then in values/arrays.xml put the filename in $feeling_filenames. There must be four emojis exactly.
+ */
 class EmojiSelection : AppCompatActivity() {
     private var emojis: Array<ImageView> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +51,7 @@ class EmojiSelection : AppCompatActivity() {
         val arrayid = this.resources.getIdentifier(feeling?.lowercase()?.filter {!it.isWhitespace()} + "_filenames", "array", this.packageName)
         val emojifilenames = resources.getStringArray(arrayid)
 
-
+        //The current emoji being used gets a green border
         val highlightgreen = getDrawable(R.drawable.highlightgreen)
         val currentEmojiFile = resources.getIdentifier(prefs.getString(feeling, feeling)!!.lowercase().filter {!it.isWhitespace()}, "drawable", packageName)
 
@@ -64,6 +71,9 @@ class EmojiSelection : AppCompatActivity() {
         selectButton.background.alpha = 50
 
 
+        //If you click on an emoji that isn't the one currently used, it gets a yellow background
+        //Click it again to deselect
+        //Click the "Select" button to make it the currently chosen emoji
         val listener = OnClickListener {
             val highlight = getDrawable(R.drawable.highlight)
             for (i in emojis.indices) {
@@ -91,7 +101,6 @@ class EmojiSelection : AppCompatActivity() {
         tr.setOnClickListener(listener)
         bl.setOnClickListener(listener)
         br.setOnClickListener(listener)
-
 
 
         selectButton.setOnClickListener {

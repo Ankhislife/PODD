@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PODD</string>
+    <string name="app_name">eXpress</string>
     <string name="button">Previous</string>
     <string name="next">Next</string>
     <string name="happy">Happy</string>
@@ -17,7 +17,7 @@
     <string name="emoji">emoji</string>
     <string name="settings">Settings</string>
     <string name="start">Start</string>
-    <string name="mainName">PODD</string>
+    <string name="mainName">eXpress</string>
     <string name="colordropdown">Colors</string>
     <string name="back">Back</string>
     <string name="happypref">Happy Emoji</string>
